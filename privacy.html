@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>MangaCraft Privacy Policy</title>
+<meta name="description" content="What MangaCraft keeps on your device, what its server keeps, and what is sent to the AI provider.">
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" hreflang="en" href="privacy.html">
+<link rel="alternate" hreflang="ja" href="ja/privacy.html">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">MangaCraft</a>
+    <nav class="lang" aria-label="Language">
+      <a href="privacy.html" hreflang="en" lang="en" aria-current="page">EN</a>
+      <a href="ja/privacy.html" hreflang="ja" lang="ja">日本語</a>
+    </nav>
+  </div>
+</header>
+<div class="tone" aria-hidden="true"></div>
+
+<main id="main" class="wrap">
+
+<h1>MangaCraft Privacy Policy</h1>
+<p class="updated">Last updated 6 October 2026</p>
+
+<p class="lead">MangaCraft is an iPhone and iPad app that turns your story idea into manga. This policy explains what happens to what you put into it. In it, “we” and “us” mean the independent developer who makes MangaCraft.</p>
+
+<nav class="toc" aria-label="On this page">
+  <p>On this page</p>
+  <ol>
+    <li><a href="#short">The short version</a></li>
+    <li><a href="#device">What stays on your device</a></li>
+    <li><a href="#server">What our server keeps</a></li>
+    <li><a href="#ai">What is sent to AI providers</a></li>
+    <li><a href="#photos">Photos you use to cast yourself or a place</a></li>
+    <li><a href="#account">Your account and Sign in with Apple</a></li>
+    <li><a href="#purchases">Purchases</a></li>
+    <li><a href="#tracking">No advertising, no tracking</a></li>
+    <li><a href="#children">Children</a></li>
+    <li><a href="#deleting">Deleting your data</a></li>
+    <li><a href="#changes">Changes to this policy</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</nav>
+
+<h2 id="short">The short version</h2>
+<ul>
+  <li>Your projects, characters, scripts and every generated image are stored <strong>on your device only</strong>. We do not upload them, and we cannot read them.</li>
+  <li>To write and draw, you sign in with Apple. Our server keeps your account and your credits, not your manga.</li>
+  <li>When you write or draw, your instructions go through our server to the AI provider. Our server passes them on and does not keep them.</li>
+  <li>A photo you use to cast yourself or a place is <strong>sent once and then discarded</strong>. We keep the drawing, never the photograph.</li>
+  <li>There is <strong>no advertising, no analytics and no tracking</strong>, and we do not sell data.</li>
+  <li>You can delete your account, and what our server keeps about you, from inside the app.</li>
+</ul>
+
+<h2 id="device">What stays on your device</h2>
+<p>Your projects, characters, scripts and every generated image are stored on this device only. We do not upload them, and we cannot read them.</p>
+<p>Backups are files you make and keep yourself. <span class="ui">Settings → Back up all books</span> creates a backup file for each book and hands it to you to save wherever you choose; PDF export from the Read tab works the same way. We never receive a copy.</p>
+
+<h2 id="server">What our server keeps</h2>
+<p>Writing and drawing need you to sign in with Apple, because your credits are kept with your account. Our server runs on Google Cloud and keeps its records in Google Cloud Firestore. For each account it stores:</p>
+<ul>
+  <li>the identifier Apple gives us for your account;</li>
+  <li>the name and email address you choose to share when you sign in (this may be an Apple private relay address);</li>
+  <li>your credit balance and its history: each time credits were added or spent;</li>
+  <li>the App Store transaction ids of your purchases;</li>
+  <li>your subscription status: which plan, and when it expires;</li>
+  <li>a Sign in with Apple token, used only to revoke MangaCraft’s access when you delete your account.</li>
+</ul>
+<p>It does not keep your stories, characters or photos, or the instructions it passes to the AI provider. There is one short exception: so that a dropped connection never means paying twice, it keeps the provider’s answer to each request (the text that was written, or the link to the drawing) for one hour, and hands it back if your phone asks again. After the hour it is no longer used, and it is deleted automatically, normally within a day.</p>
+
+<h2 id="ai">What is sent to AI providers</h2>
+<p>When you write or draw, the text instruction, and for drawing any reference images from your character sheets and any photo you supply, go through our server to the AI provider. Our server passes them on and does not keep them. We do not send your name, email, or anything identifying you to the provider.</p>
+<ul>
+  <li>The provider is <strong>fal.ai</strong>, which runs the models.</li>
+  <li>Panels, character sheets and places are drawn by Google’s <strong>Nano Banana 2</strong> image model.</li>
+  <li>Stories and scripts are written by large language models offered through fal.ai.</li>
+  <li>A small vision model also looks at each finished drawing, to find faces so speech balloons don’t cover them, and to spot sweat drops so they can be removed.</li>
+</ul>
+<p>The provider processes what it receives under its own terms and privacy policy.</p>
+
+<h2 id="photos">Photos you use to cast yourself or a place</h2>
+<p>If you choose to cast yourself, or to draw a place from a photo, the app asks for one photo.</p>
+<div class="box">
+  <p>A photo you supply is sent once, through our server, to our image provider to draw your character sheet or the place, and is then discarded. It is never written to disk and never kept on a server. What we keep is the drawing, not the photograph.</p>
+</div>
+<p>Deleting a character cast from a photo deletes their sheet and every panel drawn with them; those panels go back to undrawn.</p>
+<p>Use only a photo of yourself. Photos containing more than one face are rejected automatically. The <a href="terms.html#content-rules">content rules</a> say more.</p>
+
+<h2 id="account">Your account and Sign in with Apple</h2>
+<p>You sign in with Apple, so we never see your Apple ID password. Apple lets you choose whether to share your name and your real email address, or to hide your email behind a private relay address; we never see your real address unless you share it, and the app works the same either way.</p>
+<p>Your account exists so that your credits and subscription follow you to a new phone. You can sign out in <span class="ui">Settings → Account → Sign out</span>, or delete the account (see <a href="#deleting">Deleting your data</a>).</p>
+
+<h2 id="purchases">Purchases</h2>
+<p>Payments are handled by Apple. We never see your card details. We record which products you bought, the App Store transaction ids and your subscription’s plan and expiry, so we can grant credits.</p>
+
+<h2 id="tracking">No advertising, no tracking</h2>
+<p>There are no third-party analytics or advertising SDKs in MangaCraft. We do not track you across apps or websites, and we do not sell data.</p>
+<p>This website has no cookies, analytics or trackers either. It is hosted on GitHub Pages.</p>
+
+<h2 id="children">Children</h2>
+<p>MangaCraft is intended for people aged 16 and over, and it is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has made an account, write to us and we will delete it.</p>
+<p>Photos of anyone under 18 must not be uploaded.</p>
+
+<h2 id="deleting">Deleting your data</h2>
+<ul>
+  <li><span class="ui">Settings → Account → Delete account</span> deletes your account, its balance and its history from our server and removes MangaCraft from your Apple ID by revoking its Sign in with Apple access.</li>
+  <li>After an account is deleted, our server keeps two small records: when an account with that Apple identifier was deleted, so that signing up again does not grant the welcome credits a second time; and the App Store transaction ids of purchases already credited, which are not linked to any account and only stop one purchase being credited twice.</li>
+  <li><span class="ui">Settings → Delete everything</span> removes every project and image from this device. It cannot be undone.</li>
+  <li>Deleting one book or one character removes it from the device. Deleting a character cast from a photo also deletes every panel drawn with them.</li>
+</ul>
+<p>A subscription is billed by Apple: cancel it in your Apple ID settings, or it keeps renewing. Deleting your account does not cancel it.</p>
+<p>If you can’t use the app to delete your account, write to us and we will help.</p>
+
+<h2 id="changes">Changes to this policy</h2>
+<p>If MangaCraft changes how it handles your information, we will update this policy before the change ships, and the date at the top will change.</p>
+
+<h2 id="contact">Contact</h2>
+<p>MangaCraft is made by an independent developer. Questions about this policy, requests about your information (to see it, correct it or delete it), and reports about generated content can be sent to <a href="mailto:mangacraft.support@gmail.com">mangacraft.support@gmail.com</a>.</p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav aria-label="Site">
+      <a href="index.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="ja/privacy.html" hreflang="ja" lang="ja">日本語</a>
+    </nav>
+    <p>MangaCraft, by an independent developer · <a href="mailto:mangacraft.support@gmail.com">mangacraft.support@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>

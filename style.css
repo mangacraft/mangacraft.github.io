@@ -1,0 +1,291 @@
+/* MangaCraft — shared style for the support, privacy and terms pages.
+   Paper and ink, like the app. No web fonts, no scripts, no trackers. */
+
+:root {
+  --paper: #F4F2EE;
+  --card: #FCFBF8;
+  --ink: #121214;
+  --muted: #56544F;
+  --rule: #D8D5CF;
+  --accent: #C9244A;
+  --tone: rgba(18, 18, 20, 0.17);
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121315;
+    --card: #1A1C1F;
+    --ink: #ECEAE5;
+    --muted: #A3A099;
+    --rule: #2E3034;
+    --accent: #F0718D;
+    --tone: rgba(236, 234, 229, 0.13);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body:lang(ja) {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+               "Noto Sans JP", "Yu Gothic", "YuGothic", Meiryo, sans-serif;
+  line-height: 1.85;
+  line-break: strict;
+}
+
+/* Column: 44rem of text, a 16px gutter on phones. */
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (min-width: 40rem) {
+  .wrap { padding: 0 1.5rem; }
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0;
+}
+.skip:focus {
+  left: 1rem;
+  top: .5rem;
+  background: var(--ink);
+  color: var(--paper);
+  padding: .4rem .7rem;
+  z-index: 10;
+}
+
+/* Header: the name, and the language switch. */
+.site-header {
+  border-bottom: 2px solid var(--ink);
+}
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 3.6rem;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.brand::before {
+  content: "";
+  display: block;
+  width: 1.4rem;
+  height: .22rem;
+  background: var(--accent);
+}
+.brand:hover { color: var(--ink); }
+
+.lang {
+  display: flex;
+  gap: .3rem;
+  font-size: .85rem;
+  line-height: 1.2;
+}
+.lang a {
+  display: inline-block;
+  padding: .3rem .6rem;
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+.lang a[aria-current] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* A strip of screentone under the header. */
+.tone {
+  height: .6rem;
+  background-image: radial-gradient(circle, var(--tone) 1px, transparent 1.4px);
+  background-size: 6px 6px;
+}
+
+main {
+  padding-top: 2.4rem;
+  padding-bottom: 3.5rem;
+}
+
+h1 {
+  font-size: clamp(1.7rem, 6vw, 2.15rem);
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  margin: 0 0 .45rem;
+}
+:lang(ja) h1 { letter-spacing: 0; line-height: 1.3; }
+
+.updated {
+  color: var(--muted);
+  font-size: .9rem;
+  margin: 0 0 2rem;
+}
+
+.lead { font-size: 1.08rem; }
+
+h2 {
+  font-size: 1.22rem;
+  line-height: 1.3;
+  letter-spacing: -.01em;
+  margin: 2.6rem 0 .8rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--rule);
+  scroll-margin-top: 1rem;
+}
+:lang(ja) h2 { letter-spacing: 0; }
+
+h3 {
+  font-size: 1.02rem;
+  line-height: 1.35;
+  margin: 1.7rem 0 .45rem;
+  scroll-margin-top: 1rem;
+}
+
+p { margin: 0 0 1rem; }
+ul, ol { margin: 0 0 1rem; padding-left: 1.3rem; }
+li { margin: 0 0 .55rem; }
+li > ul, li > ol { margin-top: .5rem; }
+ol.steps > li::marker { font-weight: 700; }
+
+strong { font-weight: 650; }
+
+a {
+  color: var(--ink);
+  text-decoration-line: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: .09em;
+  text-underline-offset: .2em;
+}
+a:hover { color: var(--accent); }
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+a[href^="mailto:"] {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+/* Names of buttons and screens in the app. */
+.ui { font-weight: 600; }
+
+.box {
+  background: var(--card);
+  border-left: 3px solid var(--accent);
+  padding: .9rem 1rem;
+  margin: 1.4rem 0;
+}
+.box > :last-child { margin-bottom: 0; }
+
+.note {
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+/* "On this page" */
+.toc {
+  background: var(--card);
+  border: 1.5px solid var(--ink);
+  padding: .9rem 1.1rem .5rem;
+  margin: 0 0 2rem;
+}
+.toc p {
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 .4rem;
+}
+:lang(ja) .toc p { letter-spacing: .02em; }
+.toc ol {
+  margin: 0 0 .5rem;
+  padding-left: 1.3rem;
+  font-size: .95rem;
+}
+.toc li { margin: 0 0 .25rem; }
+
+/* Prices and costs. */
+.table-wrap {
+  overflow-x: auto;
+  margin: 0 0 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .95rem;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: .5rem .75rem .5rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+thead th {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1.5px solid var(--ink);
+}
+:lang(ja) thead th { letter-spacing: .02em; }
+.num {
+  text-align: right;
+  padding-right: 0;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Questions and answers. */
+dl.faq { margin: 0 0 1rem; }
+dl.faq dt {
+  font-weight: 650;
+  margin: 1.3rem 0 .3rem;
+}
+dl.faq dd { margin: 0 0 .8rem; }
+dl.faq dd > :last-child { margin-bottom: 0; }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .9em;
+}
+
+/* Footer. */
+.site-footer {
+  border-top: 2px solid var(--ink);
+  padding: 1.4rem 0 2.6rem;
+  font-size: .9rem;
+  color: var(--muted);
+}
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem 1.2rem;
+  margin: 0 0 .6rem;
+}
+.site-footer p { margin: 0; }
