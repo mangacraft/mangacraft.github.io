@@ -289,3 +289,9 @@ code {
   margin: 0 0 .6rem;
 }
 .site-footer p { margin: 0; }
+
+/* Download button: the app's ink slab with the red offset drop. */
+.get { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; margin: 1.4rem 0 2rem; }
+.get-button { display: inline-block; padding: 0.8rem 1.3rem; background: var(--ink); color: var(--paper); border: 2px solid var(--ink); box-shadow: 5px 5px 0 var(--accent); font-weight: 700; text-decoration: none; }
+.get-button:hover { color: var(--paper); transform: translate(-1px, -1px); box-shadow: 6px 6px 0 var(--accent); }
+.get-note { color: var(--muted); font-size: 0.95rem; }
